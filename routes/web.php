@@ -17,9 +17,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get('/index', function () {
-    return view('index');
+    return view('.index');
 });
 
 Auth::routes();
+Auth::routes(['redirect' => '/index']);
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
