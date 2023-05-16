@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>SB Admin 2 - Bootstrap Admin Theme</title>
+    <title>المجمع المائي حيدرة</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="{{ asset('template_front/css/rtl/bootstrap.min.css') }}" rel="stylesheet">
@@ -54,7 +54,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">SB Admin v2.0</a>
+                <a class="navbar-brand" href="index.html">المجمع المائي حيدرة</a>
             </div>
             <!-- /.navbar-header -->
 
@@ -260,17 +260,17 @@
                         </div>
                     @endif
 
-                    {{ __('You are logged in!') }} as  {{ Auth::user()->name }}
+                    {{ __('أنت مسجَّل بإسم!') }} as  {{ Auth::user()->name }}
 </a> 
 
                         </li>
-                        <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
+                        <li><a href="#"><i class="fa fa-gear fa-fw"></i> الإعدادات</a>
                         </li>
                         <li class="divider"></li>
                         <li> <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
-                                        {{ __('Logout') }}
+                                        {{ __('تسجيل الخروج') }}
                                     </a>
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                                         @csrf
@@ -298,7 +298,7 @@
                             <!-- /input-group -->
                         </li>
                         <li>
-                            <a href="index.html"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
+                            <a href="index.html"><i class="fa fa-dashboard fa-fw"></i> لوحة التحكم</a>
                         </li>
                         <li>
                             <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Charts<span class="fa arrow"></span></a>
@@ -340,13 +340,19 @@
                             <!-- /.nav-second-level -->
                         </li>
                         <li>
-                            <a href="#"><i class="fa fa-sitemap fa-fw"></i> Multi-Level Dropdown<span class="fa arrow"></span></a>
+                            <a href="#"><i class="fa fa-sitemap fa-fw"></i> التصرف في الأعضاء<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="#">Second Level Item</a>
+                                    <a href="#">قائمة الأعضاء</a>
                                 </li>
                                 <li>
-                                    <a href="#">Second Level Item</a>
+                                    <a href="{{ route('register') }}">أضف عضو</a>
+                                </li>
+                                <li>
+                                    <a href="#">تحيين عضو</a>
+                                </li>
+                                <li>
+                                    <a href="#">حذف عضو</a>
                                 </li>
                                 <li>
                                     <a href="#">Third Level <span class="fa arrow"></span></a>
@@ -393,6 +399,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <h1 class="page-header">Blank</h1>
+                    @yield('content')
                 </div>
                 <!-- /.col-lg-12 -->
             </div>
