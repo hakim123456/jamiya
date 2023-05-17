@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\AdherentController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -31,5 +32,6 @@ Route::get('/users/show', 'App\Http\Controllers\UserController@show')->name('use
 Route::resource('users', UserController::class);
 // Store User
 Route::post('/users', 'App\Http\Controllers\UserController@store')->name('users.store');
-
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::resource('adherents', 'App\Http\Controllers\AdherentController');
+Route::get('/adherents', 'App\Http\Controllers\AdherentController@index')->name('adherents.index');

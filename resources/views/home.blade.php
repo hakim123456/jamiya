@@ -301,13 +301,13 @@
                             <a href="  "><i class="fa fa-dashboard fa-fw"></i> لوحة التحكم</a>
                         </li>
                         <li>
-                            <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Charts<span class="fa arrow"></span></a>
+                            <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> التصرف في المشتركين<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="flot.html">Flot Charts</a>
+                                    <a href="{{ route('adherents.index') }}">قائمة المشتركين</a>
                                 </li>
                                 <li>
-                                    <a href="morris.html">Morris.js Charts</a>
+                                    <a href="{{ route('adherents.create') }}">إضافة مشترك</a>
                                 </li>
                             </ul>
                             <!-- /.nav-second-level -->
