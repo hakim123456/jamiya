@@ -35,6 +35,10 @@ public function store(Request $request)
     return redirect()->route('users.index')
         ->with('success', 'User created successfully.');
 }
+public function show(User $user)
+{
+    return view('users.show', compact('user'));
+}
 
 public function edit(User $user)
 {
@@ -49,12 +53,20 @@ public function update(Request $request, User $user)
         'password' => 'nullable|min:6',
     ]);
 
-    $user->update($request->all());
+    $data = [
+        'name' => $request->input('name'),
+        'email' => $request->input('email'),
+    ];
+
+    if ($request->filled('password')) {
+        $data['password'] = Hash::make($request->input('password'));
+    }
+
+    $user->update($data);
 
     return redirect()->route('users.index')
         ->with('success', 'User updated successfully.');
 }
-
 public function destroy(User $user)
 {
     $user->delete();

@@ -298,7 +298,7 @@
                             <!-- /input-group -->
                         </li>
                         <li>
-                            <a href="index.html"><i class="fa fa-dashboard fa-fw"></i> لوحة التحكم</a>
+                            <a href="  "><i class="fa fa-dashboard fa-fw"></i> لوحة التحكم</a>
                         </li>
                         <li>
                             <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Charts<span class="fa arrow"></span></a>
@@ -349,10 +349,10 @@
                                     <a href="{{ route('users.create') }}">أضف عضو</a>
                                 </li>
                                 <li>
-                                    <a href="#">تحيين عضو</a>
+                                    <a href="{{ route('users.index') }}">تحيين عضو</a>
                                 </li>
                                 <li>
-                                    <a href="#">حذف عضو</a>
+                                    <a href="{{ route('users.index') }}">حذف عضو</a>
                                 </li>
                                 <li>
                                     <a href="#">Third Level <span class="fa arrow"></span></a>
