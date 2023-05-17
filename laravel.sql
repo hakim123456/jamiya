@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : mar. 16 mai 2023 à 01:05
+-- Généré le : mer. 17 mai 2023 à 02:39
 -- Version du serveur : 10.4.28-MariaDB
 -- Version de PHP : 8.2.4
 
@@ -111,7 +111,11 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 'admin', 'admin@admin.com', NULL, '$2y$10$7tzrUMipxB2j5qqePXGicemRAd3CgCSTxNi/l1dfCjvKq8nhcIZwm', 'MJnMt0qu2fEcoolz8OeFTbHcrq8z9OSPnvKPXb0s7KEZi8OV2MqNzXS3jZRv', '2023-05-15 19:38:18', '2023-05-15 19:38:18');
+(1, 'admin', 'admin@admin.com', NULL, '$2y$10$7tzrUMipxB2j5qqePXGicemRAd3CgCSTxNi/l1dfCjvKq8nhcIZwm', 'ZTU0s6pamt0hC6sFNoHsLbZ4jmBVDQtN2VZs3wI8aq1im5G50ANjq1ZTgOIZ', '2023-05-15 19:38:18', '2023-05-15 19:38:18'),
+(2, 'hakim', 'hakim@hakim.com', NULL, '$2y$10$Xb1QeDq6Ze9pwrJ7B0G85.sHampGsQSzH45UnbK8gaJ4UarVYTvh6', NULL, '2023-05-16 20:48:54', '2023-05-16 20:48:54'),
+(3, 'sdcs', 'sdsdmsss@sd.sd', NULL, '$2y$10$wOxaeaGzmyjVWqtZcmoZLu/RNBQjOkVVOCVOk0XjTChYhUT6LBjsi', NULL, '2023-05-16 21:18:47', '2023-05-16 21:18:47'),
+(5, 'test', 'test@test.com', NULL, '$2y$10$gxhGVHF/2OWmaYTe/.Zx8uDVS7ess0/DFA0JrxAasHGjRzxZbKgmW', NULL, '2023-05-16 23:07:18', '2023-05-16 23:07:18'),
+(6, 'YEYSDHJB', 'QSDQ@QSQ.qq', NULL, '$2y$10$iEj99DiBrP4nveB26clKB.9SyKd3op82uzUCo/.Ulg2CpcRm3hQia', NULL, '2023-05-16 23:35:45', '2023-05-16 23:35:45');
 
 --
 -- Index pour les tables déchargées
@@ -177,7 +181,7 @@ ALTER TABLE `personal_access_tokens`
 -- AUTO_INCREMENT pour la table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
