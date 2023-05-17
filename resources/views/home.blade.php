@@ -343,10 +343,10 @@
                             <a href="#"><i class="fa fa-sitemap fa-fw"></i> التصرف في الأعضاء<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="#">قائمة الأعضاء</a>
+                                    <a href="{{ route('users.index') }}">قائمة الأعضاء</a>
                                 </li>
                                 <li>
-                                    <a href="{{ route('register') }}">أضف عضو</a>
+                                    <a href="{{ route('users.create') }}">أضف عضو</a>
                                 </li>
                                 <li>
                                     <a href="#">تحيين عضو</a>
@@ -396,9 +396,10 @@
 
         <!-- Page Content -->
         <div id="page-wrapper">
+        
             <div class="row">
                 <div class="col-lg-12">
-                    <h1 class="page-header">Blank</h1>
+                    <h1 class="page-header"> </h1>
                     @yield('content')
                 </div>
                 <!-- /.col-lg-12 -->
@@ -418,6 +419,10 @@
 
     <!-- Metis Menu Plugin JavaScript -->
     <script src="{{ asset('template_front/js/metisMenu/metisMenu.min.js') }}"></script>
+    <!-- DataTables JavaScript -->
+    <script src="{{ asset('template_front/js/jquery/jquery.dataTables.min.js') }}"></script>
+    <script src="{{ asset('template_front/js/bootstrap/dataTables.bootstrap.min.js') }}"></script>
+
 
     <!-- Morris Charts JavaScript -->
     <script src="{{ asset('template_front/js/raphael/raphael.min.js') }}"></script>
@@ -425,6 +430,14 @@
 
     <!-- Custom Theme JavaScript -->
     <script src="{{ asset('template_front/js/sb-admin-2.js') }}"></script>
+
+
+<!-- Page-Level Demo Scripts - Tables - Use for reference -->
+<script>
+    $(document).ready(function() {
+      $('#dataTables-example').dataTable();
+    });
+</script>
 
 </body>
 

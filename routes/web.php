@@ -22,5 +22,12 @@ Route::get('/index', function () {
 
 Auth::routes();
 Auth::routes(['redirect' => '/index']);
+//Route::resource('users', 'UserController');
+Route::get('/users', 'App\Http\Controllers\UserController@index')->name('users.index');
+// Create User form
+Route::get('/users/create', 'App\Http\Controllers\UserController@create')->name('users.create');
+
+// Store User
+Route::post('/users', 'App\Http\Controllers\UserController@store')->name('users.store');
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
