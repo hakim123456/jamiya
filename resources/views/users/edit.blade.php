@@ -31,7 +31,7 @@
         </div>
         <br>
         <br>
-        <button type="submit" class="btn btn-primary btn-lg btn-block">أضف عضو</button>
+        <button type="submit" class="btn btn-primary btn-lg btn-block">تحيين عضو</button>
        
     </form>
     </div>
