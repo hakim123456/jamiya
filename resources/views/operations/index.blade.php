@@ -52,7 +52,7 @@
                                     <table class="table table-striped table-bordered table-hover" id="dataTables-example">
                                         <thead>
                             <tr class="odd gradeX">
-                                <td> <b>   المبلغ الجملي بدون احتساب مبلغ بيع الماء </b> </td> 
+                                <td> <b>   المبلغ الجملي الموجود بالصندوق بدون احتساب مبلغ بيع الماء </b> </td> 
                                 <td> <b>  {{ $sum }}  </b> </td> 
                                  </tr>
                                 </thead>
