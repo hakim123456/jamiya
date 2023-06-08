@@ -1,7 +1,7 @@
 <!-- resources/views/users/create.blade.php -->
 @extends('home')
 @section('content')
-    <h1>إضافة مداخيل</h1>
+    <h1>قائمة المداخيل</h1>
 
     @if ($errors->any())
         <div class="alert alert-danger">
@@ -36,10 +36,11 @@
         <div>
             <label for="type_opération" class="form-group"> نوع العملية </label>
             <select class="form-control" aria-label="Select Option" name="type_opération">
-                <option selected>Select an option</option>
-                <option value="1">Option 1</option>
-                <option value="2">Option 2</option>
-                <option value="3">Option 3</option>
+                <option selected>اختر عملية</option>
+                <option value="انخراطات"> انخراطات</option>
+                <option value="اشتراكات"> اشتراكات</option>
+                <option value="مداخيل اخرى ">مداخيل اخرى </option>
+                <option value="مداخيل مختلفة">مداخيل مختلفة </option>
             </select>
         </div>
         <div>

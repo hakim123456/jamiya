@@ -10,8 +10,9 @@ class OperationController extends Controller
     public function index()
     {
         $operations = Operation::all();
-        return view('operations.index', compact('operations'));
-    }
+        $sum = Operation::sum('somme');
+        return view('operations.index', compact('operations','sum'));
+        }
 
     public function create()
     {
@@ -55,4 +56,5 @@ class OperationController extends Controller
 
         return redirect()->route('operations.index');
     }
+   
 }

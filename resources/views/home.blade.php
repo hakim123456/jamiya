@@ -317,10 +317,10 @@
                             <a href="#"><i class="fa fa-wrench fa-fw"></i>المقابيض<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="{{ route('operations.create') }}""> اضافة مداخيل</a>
+                                    <a href="{{ route('operations.create') }}"> اضافة مداخيل</a>
                                 </li>
                                 <li>
-                                    <a href="buttons.html">المصاريف</a>
+                                    <a href="{{ route('operations.index') }}">قائمة المداخيل</a>
                                 </li>
                                
                             </ul>
