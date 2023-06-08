@@ -35,8 +35,8 @@ public function store(Request $request)
         'date_inscription' => 'required|date',
         'num_robenet' => 'required|integer',
         'ref_compteur' => 'required|string',
-        'allt' => 'required|integer',
-        'long' => 'required|integer',
+        'allt' => 'required|string',
+        'long' => 'required|string',
         'description' => 'nullable|string',
     ]);
 

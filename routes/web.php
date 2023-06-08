@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\AdherentController;
+use App\Http\Controllers\OperationController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -35,3 +36,10 @@ Route::post('/users', 'App\Http\Controllers\UserController@store')->name('users.
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::resource('adherents', 'App\Http\Controllers\AdherentController');
 Route::get('/adherents', 'App\Http\Controllers\AdherentController@index')->name('adherents.index');
+//operation
+Route::get('/operations', [OperationController::class, 'index'])->name('operations.index');
+Route::get('/operations/create', [OperationController::class, 'create'])->name('operations.create');
+Route::post('/operations', [OperationController::class, 'store'])->name('operations.store');
+Route::get('/operations/{operation}/edit', [OperationController::class, 'edit'])->name('operations.edit');
+Route::put('/operations/{operation}', [OperationController::class, 'update'])->name('operations.update');
+Route::delete('/operations/{operation}', [OperationController::class, 'destroy'])->name('operations.destroy');
