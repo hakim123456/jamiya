@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\AdherentController;
 use App\Http\Controllers\OperationController;
+use App\Http\Controllers\DepenseController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -43,3 +44,5 @@ Route::post('/operations', [OperationController::class, 'store'])->name('operati
 Route::get('/operations/{operation}/edit', [OperationController::class, 'edit'])->name('operations.edit');
 Route::put('/operations/{operation}', [OperationController::class, 'update'])->name('operations.update');
 Route::delete('/operations/{operation}', [OperationController::class, 'destroy'])->name('operations.destroy');
+//depenses 
+Route::resource('depenses', DepenseController::class);
