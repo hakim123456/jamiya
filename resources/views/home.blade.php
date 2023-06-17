@@ -333,7 +333,20 @@
                                     <a href="{{ route('depenses.create') }}"> اضافة مصاريف</a>
                                 </li>
                                 <li>
-                                    <a href="">قائمة مصاريف</a>
+                                    <a href="{{ route('depenses.index') }}">قائمة مصاريف</a>
+                                </li>
+                               
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-wrench fa-fw"></i>الفوترة<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="{{ route('factures.index') }}"> اضافة فاتورة </a>
+                                </li>
+                                <li>
+                                    <a href="">قائمة الفواتير</a>
                                 </li>
                                
                             </ul>

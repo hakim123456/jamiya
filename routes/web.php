@@ -5,6 +5,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\AdherentController;
 use App\Http\Controllers\OperationController;
 use App\Http\Controllers\DepenseController;
+use App\Http\Controllers\FactureController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -46,3 +47,12 @@ Route::put('/operations/{operation}', [OperationController::class, 'update'])->n
 Route::delete('/operations/{operation}', [OperationController::class, 'destroy'])->name('operations.destroy');
 //depenses 
 Route::resource('depenses', DepenseController::class);
+//factures
+//Route::resource('factures', FactureController::class);
+Route::get('/factures', [FactureController::class, 'index'])->name('factures.index');
+Route::get('/factures/create/{id}', [FactureController::class, 'create'])->name('factures.create');
+Route::post('/factures', [FactureController::class, 'store'])->name('factures.store');
+Route::get('/factures/{facture}/edit', [FactureController::class, 'edit'])->name('factures.edit');
+Route::put('/factures/{facture}', [FactureController::class, 'update'])->name('factures.update');
+Route::delete('/factures/{facture}', [FactureController::class, 'destroy'])->name('factures.destroy');
+Route::get('/factures/index2',  [App\Http\Controllers\FactureController::class, 'index2'])->name('factures.index2');
