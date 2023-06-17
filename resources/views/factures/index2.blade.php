@@ -4,46 +4,77 @@
     {{ session('success') }}
 </div> @endif
 <!-- /.row -->
-<div class="row">
-    <div class="col-lg-12">
-        <div class="panel panel-default">
-            <div class="panel-heading"> اضافة فاتورة شهرية </div>
-            <!-- /.panel-heading -->
-            <div class="panel-body">
-                <div class="table-responsive">
-                    <table class="table table-striped table-bordered table-hover" id="dataTables-example">
+<div class="container">
+    <div class="row">
+        <div>
+            <div class="card mt-5">
+                <div class="card-header bg-primary text-white">
+                    <h4>     فاتــورة استهــلاك لشهــر   </h4>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h5>تفاصيل الفاتورة</h5>
+                            <p> رقم الفاتورة:</p>
+                            <p>التاريخ :</p>
+                        </div>
+                        <div class="col-md-6 text-right">
+                            <h5>بيانات المشترك:</h5>
+                            <p>رقم المشترك: {{$facture->id}}  </p>
+                            <p>اسم و لقب  المشترك: </p>
+                            <p> العمادة : التجمع السكني</p>
+                            <p>مرجع العداد: </p>
+                            <p>مرجع الحنفية:</p>
+                        </div>
+                    </div>
+                    <table class="table table-bordered mt-4">
                         <thead>
                             <tr>
-                                <th>رقم المشترك</th>
-                                <th>رقم ب ت و</th>
-                                <th>اسم ولقب المشترك</th>
-                                <th> رقم الحنفية </th>
-                                <th>  مرجع العداد </th>
-                                <th>  </th>
+                                <th>Item</th>
+                                <th>Quantity</th>
+                                <th>Unit Price</th>
+                                <th>Total</th>
                             </tr>
                         </thead>
-                        <tbody> @foreach($adherents as $adherent) <tr class="odd gradeX">
-                                <td>{{ $numero_adherent=$adherent->numero_adherent }}</td>
-                                <td>{{ $adherent->cin_adherent }}</td>
-                                <td>{{ $adherent->prenom_adherent }}</td>
-                                <td>{{ $adherent->num_robenet }}</td>
-                                <td>{{ $adherent->ref_compteur }}</td>
-                                <td>
-                                    <form action="" method="POST">
-                                        <a class="btn btn-info" href="{{ route('factures.create', $adherent->id) }}">اضافة فاتورة شهرية</a>
-                                  </form>
-                                </td>
-                            </tr> @endforeach </tbody>
+                        <tbody>
+                            <tr>
+                                <td>Product A</td>
+                                <td>2</td>
+                                <td>$10</td>
+                                <td>$20</td>
+                            </tr>
+                            <tr>
+                                <td>Product B</td>
+                                <td>3</td>
+                                <td>$15</td>
+                                <td>$45</td>
+                            </tr>
+                            <tr>
+                                <td colspan="3" class="text-right">Subtotal</td>
+                                <td>$65</td>
+                            </tr>
+                            <tr>
+                                <td colspan="3" class="text-right">Tax</td>
+                                <td>$6.50</td>
+                            </tr>
+                            <tr>
+                                <td colspan="3" class="text-right">Total</td>
+                                <td>$71.50</td>
+                            </tr>
+                        </tbody>
                     </table>
                 </div>
-                <!-- /.table-responsive -->
+                <div class="card-footer text-right">
+                    <button  onclick="window.print()" class="btn btn-primary">Print</button>
+                </div>
             </div>
-            <!-- /.panel-body -->
         </div>
-        <!-- /.panel -->
     </div>
-    <!-- /.col-lg-12 -->
 </div>
-<!-- /.row -->
-</div>
+<script>
+    // JavaScript code for printing
+    function printPage() {
+        window.print();
+    }
+</script>
  @endsection

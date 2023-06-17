@@ -47,14 +47,15 @@ class FactureController extends Controller
             'num_recu_paiement' => 'integer',
         ]);
 
-        Facture::create($validatedData);
+        $facture = Facture::create($validatedData);
 
-        return redirect()->route('factures.index2')
+        return redirect()->route('factures.show' , $facture->id)
             ->with('success', 'Facture created successfully.');
     }
 
     public function show(Facture $facture)
     {
+      
         return view('factures.show', compact('facture'));
     }
 

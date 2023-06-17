@@ -88,10 +88,9 @@
         </div>
 
 
-</div><button type="submit" class="btn btn-success">اضافة فاتورة</button>
+</div><button type="submit" class="btn btn-success" >اضافة فاتورة</button>
         <button type="reset" class="btn btn-warning">الغـــاء</button>
     </form>
-
 </div>
 <!-- /.col-lg-6 (nested) -->
 
