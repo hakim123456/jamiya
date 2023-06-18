@@ -56,5 +56,6 @@ Route::get('/factures/{facture}/edit', [FactureController::class, 'edit'])->name
 Route::put('/factures/{facture}', [FactureController::class, 'update'])->name('factures.update');
 Route::delete('/factures/{facture}', [FactureController::class, 'destroy'])->name('factures.destroy');
 Route::get('/factures/index2',  [App\Http\Controllers\FactureController::class, 'index2'])->name('factures.index2');
-//Route::get('/factures/show', 'App\Http\Controllers\FactureController@show')->name('factures.show');
+Route::get('/factures/show_date', 'App\Http\Controllers\FactureController@show_date')->name('factures.show_date');
 Route::get('/factures/show/{facture}', [FactureController::class, 'show'])->name('factures.show');
+Route::post('/factures/result_date', [FactureController::class, 'result_date'])->name('factures.result_date');

@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 use App\Models\Adherent;
 use App\Models\Facture;
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\DB;
 class FactureController extends Controller
 {
     public function index()
@@ -58,6 +58,25 @@ class FactureController extends Controller
       
         return view('factures.show', compact('facture'));
     }
+    public function show_date (Facture $facture)
+    {
+      
+        return view('factures.show_date', compact('facture'));
+    }
+    
+    public function result_date(Request $request)
+{
+  $start_date = $request->input('start_date');
+  $end_date = $request->input('end_date');
+
+  // Retrieve dates between the selected range from the database
+  $dates = DB::table('factures')
+              ->whereBetween('date_releve_compteur', [$start_date, $end_date])
+              ->get();
+
+  return view('factures.result_date', compact('dates'));
+}
+    
 
     public function edit(Facture $facture)
     {

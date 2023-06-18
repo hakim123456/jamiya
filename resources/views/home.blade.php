@@ -348,6 +348,9 @@
                                 <li>
                                     <a href="">قائمة الفواتير</a>
                                 </li>
+                                <li>
+                                    <a href="{{ route('factures.show_date') }}">قائمة الفواتير حسب الاشهر</a>
+                                </li>
                                
                             </ul>
                             <!-- /.nav-second-level -->
